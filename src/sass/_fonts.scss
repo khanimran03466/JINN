@@ -1,0 +1,31 @@
+// Define a mixin to handle the repetitive @font-face logic
+@mixin declare-font($weight, $style: normal, $file) {
+  @font-face {
+    font-family: "Metropolis"; // Keep this name identical for every declaration
+    src: url("/fonts/#{$file}.woff2") format("woff2"),
+        url("/fonts/#{$file}.woff") format("woff");
+    font-weight: $weight;
+    font-style: $style;
+    font-display: swap;
+  }
+}
+
+// Map all your font files to the single 'Metropolis' family
+@include declare-font(100, normal, "Metropolis-Thin");
+@include declare-font(100, italic, "Metropolis-ThinItalic");
+@include declare-font(200, normal, "Metropolis-ExtraLight");
+@include declare-font(200, italic, "Metropolis-ExtraLightItalic");
+@include declare-font(300, normal, "Metropolis-Light");
+@include declare-font(300, italic, "Metropolis-LightItalic");
+@include declare-font(400, normal, "Metropolis-Regular");
+@include declare-font(400, italic, "Metropolis-RegularItalic");
+@include declare-font(500, normal, "Metropolis-Medium");
+@include declare-font(500, italic, "Metropolis-MediumItalic");
+@include declare-font(600, normal, "Metropolis-SemiBold");
+@include declare-font(600, italic, "Metropolis-SemiBoldItalic");
+@include declare-font(700, normal, "Metropolis-Bold");
+@include declare-font(700, italic, "Metropolis-BoldItalic");
+@include declare-font(800, normal, "Metropolis-ExtraBold");
+@include declare-font(800, italic, "Metropolis-ExtraBoldItalic");
+@include declare-font(900, normal, "Metropolis-Black");
+@include declare-font(900, italic, "Metropolis-BlackItalic");

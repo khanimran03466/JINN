@@ -1,0 +1,33 @@
+// Color palette
+$primary-color: #007bff;
+$secondary-color: #0d6efd;
+$accent-color: #17a2b8;
+$danger-color: #dc3545;
+$success-color: #28a745;
+$warning-color: #ffc107;
+$info-color: #0dcaf0;
+$light-color: #f8f9fa;
+$dark-color: #212529;
+$white: #ffffff;
+$gray-color: #E9E9E9;
+
+// Typography
+$body-font: "Metropolis", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+$heading-font: "Metropolis", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+$base-font-size: 16px;
+$line-height-base: 1.5;
+
+// Spacing and layout
+$spacer: 1rem;
+$border-radius: 1.875rem;
+$card-padding: 1.25rem;
+
+// Shadows
+$shadow-sm: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+$shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+$shadow-lg: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+
+// Transitions
+$transition-fast: 150ms ease-in-out;
+$transition-medium: 300ms ease-in-out;
+$transition-slow: 400ms ease-in-out;

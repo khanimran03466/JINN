@@ -91,3 +91,183 @@
     justify-content: center;
   }
 }
+
+.key-features {
+  max-width: 816px;
+  margin: auto;
+  width: 100%;
+
+  ul {
+    background: radial-gradient(circle, #ffffff 0%, #79dcf3 50%, #0042bc 100%);
+    border-radius: 15px;
+    padding: 3px;
+    gap: 3px;
+    display: flex;
+    flex-wrap: wrap;
+
+    li {
+      //   background: linear-gradient(
+      //     180deg,
+      //     #131313 86.27%,
+      //     rgba(19, 19, 19, 0) 100%
+      //   );
+
+      border-radius: inherit;
+
+      display: flex;
+      gap: inherit;
+
+      .card {
+        background: #131313;
+        border-radius: inherit;
+        flex: 1;
+        overflow: hidden;
+        height: 415px;
+        position: relative;
+
+        video {
+          width: 100%;
+          height: 95%;
+          object-fit: contain;
+          object-position: bottom center;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          z-index: 0;
+        }
+
+        .content-wrapper {
+          padding: 1.25rem;
+          position: relative;
+          z-index: 1;
+          background: linear-gradient(
+            180deg,
+            #131313 71.04%,
+            rgba(19, 19, 19, 0) 100%
+          );
+
+          h2 {
+            font-size: clamp(22px, 1.5vw + 14px, 18px);
+            font-weight: 600;
+            line-height: 1.2;
+            margin-bottom: 5px;
+          }
+
+          p {
+            font-size: 14px;
+            line-height: 1.1;
+            font-weight: 400;
+          }
+        }
+      }
+
+      .card:first-child {
+        flex: 0.6;
+      }
+
+      .card:last-child {
+        flex: 0.4;
+      }
+
+      &:nth-child(even) {
+        .card:last-child {
+          flex: 0.6;
+        }
+
+        .card:first-child {
+          flex: 0.4;
+        }
+      }
+    }
+  }
+}
+
+.common-title {
+  font-size: clamp(42px, 2vw + 1rem, 54px);
+  font-weight: 600;
+  line-height: normal;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.who-its-for {
+  max-width: 854px;
+  margin: auto;
+  text-align: center;
+  height: 500vh;
+  position: relative;
+
+  h3 {
+    font-size: clamp(16px, 1.5vw + 1rem, 18px);
+    font-weight: 500;
+  }
+
+  p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.3;
+    color: $gray-color;
+  }
+
+  .animation-container {
+    position: sticky;
+    top: 25px;
+  }
+}
+
+.flip-container-wrapper {
+  padding: 25px;
+}
+
+.flip-card {
+  background-color: transparent;
+
+  perspective: 1500px; /* Essential for 3D effect */
+  margin-bottom: 40px;
+  min-height: 560px; /* Ensures enough space for the flip animation */
+
+  svg {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d; /* Allows children to live in 3D space */
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden; /* Hides the reverse side */
+  border-radius: 40px;
+}
+
+.flip-card-front {
+  background: #f4f4f4;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.flip-card-back {
+  transform: rotationY(180deg); /* Pre-flipped so it faces away initially */
+}
+
+.closer-heading {
+  .common-title {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    align-items: center;
+  }
+}

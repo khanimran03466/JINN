@@ -2,6 +2,10 @@ import React from "react";
 import Hero from "../shared/Hero";
 import Image from "next/image";
 import WhyDjinn from "../svgs/home/WhyDjinn";
+import VideoPlay from "../shared/VideoPlay";
+import { HomeKeyFeatures, HomeCloserLookData } from "@/app/data";
+import FlipCards from "./FlipCards";
+import Link from "next/link";
 
 const Home = () => {
   return (
@@ -88,9 +92,9 @@ const Home = () => {
             <div className="why-djinn-wrapper">
               <h2 className="why-djinn__title">Why DJINN?</h2>
               <p className="why-djinn__description">
-                DJINN isn’t just another AI tool—it’s a purpose-built platform
+                DJINN isn't just another AI tool—it's a purpose-built platform
                 designed to make sense of complex, unstructured data in the real
-                world. Here’s why businesses choose DJINN:
+                world. Here's why businesses choose DJINN:
               </p>
             </div>
             <div className="why-djinn-features">
@@ -158,11 +162,123 @@ const Home = () => {
         </div>
       </section>
 
-
       <section>
         <div className="container">
           <div className="key-features">
-              <h2>Key Features</h2>
+            <h2 className="common-title text-center gradient-text !mb-4">
+              Key Features
+            </h2>
+            <ul>
+              {HomeKeyFeatures.map((pair, index) => (
+                <li key={index} className="feature-row">
+                  {pair.map((feature, subIndex) => (
+                    <div className="card" key={subIndex}>
+                      <div className="content-wrapper">
+                        <h2>{feature.title}</h2>
+                        <p>{feature.description}</p>
+                      </div>
+                      <VideoPlay videoLink={feature.videoLink} />
+                    </div>
+                  ))}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div className="container">
+          <div className="">
+            <div className="who-its-for">
+              <div className="animation-container h-screen">
+                <h2 className="common-title gradient-text">Who It's For</h2>
+                <h3>
+                  Built for enterprises where unstructured data drives critical
+                  decisions.
+                </h3>
+                <p>
+                  Djinn is designed for industries where speed, accuracy, and
+                  insight are essential. From regulated sectors to
+                  data-intensive operations, Djinn helps teams extract real
+                  value from the noise—whether it's buried in documents, images,
+                  audio, or customer communications.
+                </p>
+
+                <FlipCards />
+
+                <div className="bottom-cont">
+                  <p className="mb-8 font-[1.2rem] gradient-text">
+                    Discover What DJINN Can Do For Your Business
+                  </p>
+                  <Link href="/discover" className="glowing-btn">
+                    Discover
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div className="container">
+          <div className="closer-look">
+            <div className="closer-heading mb-12">
+              <h2 className="common-title gradient-text">
+                A Closer Look at{" "}
+                <span>
+                  {" "}
+                  <Image
+                    src="/images/home/small-djinn-logo.svg"
+                    width={60}
+                    height={34}
+                    alt="DJINN Logo"
+                  />
+                </span>{" "}
+                DJINN's Capabilities
+              </h2>
+            </div>
+
+            <div className="closer-look-grid grid grid-cols-1 md:grid-cols-2 gap-6">
+              {HomeCloserLookData.map((item, index) => (
+                <div
+                  key={index}
+                  className={`relative rounded-[30px] overflow-hidden min-h-[400px] lg:min-h-[500px] flex ${
+                    item.type === "text"
+                      ? "bg-[#222222] p-8 lg:p-12 flex-col justify-between"
+                      : "w-full h-full"
+                  }`}
+                >
+                  {item.type === "text" ? (
+                    <>
+                      <div>
+                        <h3 className="text-white text-2xl lg:text-[28px] font-semibold mb-4 leading-tight">
+                          {item.title}
+                        </h3>
+                        <p className="text-gray-300 text-sm lg:text-[15px] font-light leading-relaxed">
+                          {item.description}
+                        </p>
+                      </div>
+                      <div className="mt-8 flex items-center">
+                        <div className="inline-flex items-center justify-center border border-gray-600 rounded-[50px] px-4 py-1.5 text-xs text-gray-400">
+                          <span>{item.index}</span>
+                          <span className="mx-2 opacity-50">|</span>
+                          <span>{item.total}</span>
+                        </div>
+                      </div>
+                    </>
+                  ) : (
+                    <Image
+                      src={item.imageLink || "/images/home/placeholder.jpg"}
+                      alt="DJINN Capability"
+                      fill
+                      className="object-cover"
+                    />
+                  )}
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>

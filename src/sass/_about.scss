@@ -1,0 +1,106 @@
+.driven-innovation {
+  max-width: 988px;
+  margin: 0 auto;
+  width: 100%;
+
+  .driven-head {
+    h2 {
+      font-size: clamp(42px, 3vw, 54px);
+      font-weight: 600;
+      line-height: 1.2;
+
+      span {
+        font-style: italic;
+      }
+    }
+
+    p {
+      font-size: clamp(28px, 30px, 32px);
+      font-weight: 500;
+      display: block;
+      line-height: 1.5;
+      margin-bottom: 24px;
+
+      img {
+        margin: 0 8px;
+        display: inline;
+      }
+    }
+  }
+}
+
+.our-mission-section {
+  height: 200vh;
+
+  .our-mission {
+    max-width: 780px;
+    margin: 0 auto;
+    text-align: center;
+
+    h2 {
+      font-size: clamp(42px, 52px, 52px);
+      font-weight: 600;
+      line-height: 1.2;
+      margin: 0;
+    }
+
+    p {
+      font-size: clamp(12px, 20px, 24px);
+      font-weight: 400;
+      display: block;
+      line-height: 1.5;
+    }
+  }
+
+  .our-mission-wrapper {
+    position: sticky;
+    top: 25px;
+    height: 100vh;
+
+    svg {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
+}
+
+
+.our-values {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+
+  ul {
+    gap: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: space-between;
+  }
+}
+
+
+
+
+.why-djinn-smarter {
+  .why-djinn-head {
+    .common-title {
+      text-align: left;
+    }
+
+    h3 {
+      color: $accent-color;
+      font-weight: 600;
+      line-height: 1.2;
+      margin: 0;
+    }
+
+    h2 {
+
+      font-weight: 600;
+      line-height: 1.2;
+      margin: 0;
+    }
+  }
+}

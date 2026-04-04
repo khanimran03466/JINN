@@ -5,11 +5,13 @@ import { useState, useRef, useEffect } from "react";
 
 const Hero = ({
   title,
+  titleHighlight,
   description,
   ctaText,
   ctaLink,
   videoLink,
   imageLink,
+  btnDark,
 }) => {
   const [videoLoaded, setVideoLoaded] = useState(false);
   const videoRef = useRef(null);
@@ -63,12 +65,15 @@ const Hero = ({
       <div className="hero-content">
         <div>
           <p className="hero-description">{description}</p>
-          <a href={ctaLink} className="glowing-btn white-btn">
+          <a href={ctaLink} className={`glowing-btn ${btnDark ? "glowing-btn" : "white-btn"}`}>
             {ctaText}
           </a>
         </div>
         <div>
           <h1 className="hero-title">{title}</h1>
+          {titleHighlight && (
+            <p className="hero-title-highlight">{titleHighlight}</p>
+          )}
         </div>
       </div>
     </div>

@@ -1,6 +1,10 @@
 import Hero from "@/components/shared/Hero";
 import OurMission from "@/components/svgs/about/OurMission";
 import Image from "next/image";
+import VideoPlay from "@/components/shared/VideoPlay";
+import YourSuccess from "@/components/svgs/about/YourSuccess";
+
+import  Link  from "next/link";
 
 const AboutUsPage = () => {
   return (
@@ -143,6 +147,58 @@ const AboutUsPage = () => {
             <div className="why-djinn-head">
               <h3 className="common-title">  Why DJINN? </h3>
               <h2 className="common-title gradient-text"> Smarter Data Processing, Made Simple. </h2>
+            </div>
+            <ul>
+              <li>
+                <div className="card">
+                  <div className="img-sec">
+                    <VideoPlay videoLink="https://cmtwebsite-video-bucket.s3.ap-south-1.amazonaws.com/Why+DJINN+01+Clarity+in+a+Complex+World+2025_03V12.mp4" />
+                  </div>
+                  <div className="content-sec">
+                    <h2>Clarity in a Complex World</h2>
+                    <p>In today's information-rich environment, DJINN cuts through the noise, providing a clear and direct path to understanding your data, especially the unstructured kind.</p>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div className="card">
+                  <div className="img-sec">
+                    <VideoPlay videoLink="https://cmtwebsite-video-bucket.s3.ap-south-1.amazonaws.com/Why+DJINN+02+Powerful+AI%2C+Effortlessly+Applied+2025_03V12.mp4" />
+                  </div>
+                  <div className="content-sec">
+                    <h2>Powerful AI, Effortlessly Applied</h2>
+                    <p>We believe powerful AI should be straightforward. DJINN is designed for intuitive use, delivering deep intelligence without unnecessary complexity.</p>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div className="card">
+                  <div className="img-sec">
+                    <VideoPlay videoLink="https://cmtwebsite-video-bucket.s3.ap-south-1.amazonaws.com/Why+DJINN+03+Democratizing+Data+Insight+2025_03V12.mp4" />
+                  </div>
+                  <div className="content-sec">
+                    <h2>Democratizing Data Insight</h2>
+                    <p>We are passionate about making the advantages of AI-driven data analysis accessible, empowering a wider range of users to leverage their data effectively.</p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+
+      <section>
+        <div className="container">
+          <div className="your-success grid grid-cols-2 gap-2">
+            <div className="left-sec">
+              <h2 className="common-title">Your Success is <span className="gradient-text">Our Priority</span></h2>
+              <p className="common-desc">We aim to be more than just a technology provider; we want to be your partner in realizing the potential of your data. We are committed to providing excellent support and working closely with you to ensure DJINN meets your specific needs and helps you achieve your objectives.</p>
+
+              <Link href="/contact" className="primary-btn ">Get Connected</Link>
+            </div>
+            <div className="right-sec">
+              <YourSuccess />
             </div>
           </div>
         </div>

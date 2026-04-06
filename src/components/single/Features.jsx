@@ -1,4 +1,5 @@
 import Hero from "../shared/Hero";
+import VideoPlay from "../shared/VideoPlay";
 
 
 const Features = () => {
@@ -15,6 +16,91 @@ const Features = () => {
           ctaLink="/get-started"
           btnDark={true}
         />
+      </section>
+
+      <section>
+        <div className="core-data">
+          <div className="container">
+            <h2 className="common-title text-center gradient-text !mb-3" >Core Data Processing</h2>
+            <p className="text-center">Web App Coming Soon by April 2026</p>
+          </div>
+
+          <div className="slider-section mt-15">
+            <div className="countinous-left">
+              <ul>
+                <li>
+                  <div className="card">
+
+                  </div>
+                </li>
+                <li>
+                  <div className="card">
+
+                  </div>
+                </li>
+                <li>
+                  <div className="card">
+                    <VideoPlay videoLink="https://cmtwebsite-video-bucket.s3.ap-south-1.amazonaws.com/Core+Data+_+1+Handwritten+Text+Recognition.mp4" />
+                  </div>
+                </li>
+                <li>
+                  <div className="card">
+
+                  </div>
+                </li>
+                <li>
+                  <div className="card">
+                    <VideoPlay videoLink="https://cmtwebsite-video-bucket.s3.ap-south-1.amazonaws.com/Core+Data+_+2+Data+Extraction.mp4" />
+                  </div>
+                </li>
+                <li>
+                  <div className="card">
+
+                  </div>
+                </li>
+                <li>
+                  <div className="card">
+
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div className="countinous-right">
+              <ul>
+                <li>
+                  <div className="card">
+
+                  </div>
+                </li>
+                <li>
+                  <div className="card">
+                    <VideoPlay videoLink="https://cmtwebsite-video-bucket.s3.ap-south-1.amazonaws.com/Core+Data+_+2+Data+Extraction.mp4" />
+                  </div>
+                </li>
+                <li>
+                  <div className="card">
+
+                  </div>
+                </li>
+                <li>
+                  <div className="card">
+                    <VideoPlay videoLink="https://cmtwebsite-video-bucket.s3.ap-south-1.amazonaws.com/Core+Data+_+3+Natural+Language+Processing.mp4" />
+                  </div>
+                </li>
+                <li>
+                  <div className="card">
+
+                  </div>
+                </li>
+                <li>
+                  <div className="card">
+
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </section>
     </>
   );

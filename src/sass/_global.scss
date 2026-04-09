@@ -44,7 +44,7 @@ h6 {
 button,
 input,
 textarea,
-select {
+select { 
   font: inherit;
 }
 
@@ -226,6 +226,7 @@ section {
     gap: 30rem;
     line-height: normal;
     margin-bottom: 25px;
+    align-items: flex-end;
 
     >div:first-child {
       flex: 0 0 20%;

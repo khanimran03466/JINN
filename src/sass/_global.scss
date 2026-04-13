@@ -44,7 +44,7 @@ h6 {
 button,
 input,
 textarea,
-select { 
+select {
   font: inherit;
 }
 
@@ -80,11 +80,11 @@ section {
     box-shadow $transition-fast;
 }
 
-.btn-primary:hover {
-  background-color: darken($primary-color, 7%);
-  border-color: darken($primary-color, 7%);
-  box-shadow: $shadow-sm;
-}
+// .btn-primary:hover {
+//   background-color: darken($primary-color, 7%);
+//   border-color: darken($primary-color, 7%);
+//   box-shadow: $shadow-sm;
+// }
 
 .glowing-btn {
   text-decoration: none;

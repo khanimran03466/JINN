@@ -1,3 +1,4 @@
+import React from "react";
 import Hero from "../shared/Hero";
 import Image from "next/image";
 import WhyDjinn from "../svgs/home/WhyDjinn";

@@ -1,3 +1,5 @@
+@use "sass:color";
+
 :root {
   --color-primary: #{$primary-color};
   --color-secondary: #{$secondary-color};
@@ -80,11 +82,11 @@ section {
     box-shadow $transition-fast;
 }
 
-// .btn-primary:hover {
-//   background-color: darken($primary-color, 7%);
-//   border-color: darken($primary-color, 7%);
-//   box-shadow: $shadow-sm;
-// }
+.btn-primary:hover {
+  background-color: color.scale($primary-color, $lightness: -14%);
+  border-color: color.scale($primary-color, $lightness: -14%);
+  box-shadow: $shadow-sm;
+}
 
 .glowing-btn {
   text-decoration: none;
@@ -338,8 +340,8 @@ section {
   }
 
   &:hover {
-    background-color: darken($primary-color, 7%);
-    border-color: darken($primary-color, 7%);
+    background-color: color.scale($primary-color, $lightness: -14%);
+    border-color: color.scale($primary-color, $lightness: -14%);
     box-shadow: $shadow-sm;
   }
 }

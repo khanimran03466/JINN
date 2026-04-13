@@ -1,10 +1,11 @@
 import Hero from "@/components/shared/Hero";
-import OurMission from "@/components/svgs/about/OurMission";
 import Image from "next/image";
 import VideoPlay from "@/components/shared/VideoPlay";
-import YourSuccess from "@/components/svgs/about/YourSuccess";
+import dynamic from "next/dynamic";
+import Link from "next/link";
 
-import  Link  from "next/link";
+const OurMission = dynamic(() => import("@/components/svgs/about/OurMission"), { ssr: false });
+const YourSuccess = dynamic(() => import("@/components/svgs/about/YourSuccess"), { ssr: false });
 
 const AboutUsPage = () => {
   return (

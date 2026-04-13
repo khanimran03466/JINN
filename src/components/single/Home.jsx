@@ -1,11 +1,12 @@
-import React from "react";
 import Hero from "../shared/Hero";
 import Image from "next/image";
 import WhyDjinn from "../svgs/home/WhyDjinn";
 import VideoPlay from "../shared/VideoPlay";
 import { HomeKeyFeatures, HomeCloserLookData } from "@/app/data";
-import FlipCards from "./FlipCards";
+import dynamic from "next/dynamic";
 import Link from "next/link";
+
+const FlipCards = dynamic(() => import("./FlipCards"), { ssr: false });
 
 const Home = () => {
   return (
@@ -244,11 +245,10 @@ const Home = () => {
               {HomeCloserLookData.map((item, index) => (
                 <div
                   key={index}
-                  className={`relative rounded-[30px] overflow-hidden min-h-[400px] lg:min-h-[500px] flex ${
-                    item.type === "text"
+                  className={`relative rounded-[30px] overflow-hidden min-h-[400px] lg:min-h-[500px] flex ${item.type === "text"
                       ? "bg-[#222222] p-8 lg:p-12 flex-col justify-between"
                       : "w-full h-full"
-                  }`}
+                    }`}
                 >
                   {item.type === "text" ? (
                     <>

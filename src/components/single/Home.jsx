@@ -4,10 +4,8 @@ import Image from "next/image";
 import WhyDjinn from "../svgs/home/WhyDjinn";
 import VideoPlay from "../shared/VideoPlay";
 import { HomeKeyFeatures, HomeCloserLookData } from "@/app/data";
-import dynamic from "next/dynamic";
 import Link from "next/link";
-
-const FlipCards = dynamic(() => import("./FlipCards"), { ssr: false });
+import FlipCardsClient from "./FlipCardsClient";
 
 const Home = () => {
   return (
@@ -207,7 +205,7 @@ const Home = () => {
                   audio, or customer communications.
                 </p>
 
-                <FlipCards />
+                <FlipCardsClient />
 
                 <div className="bottom-cont">
                   <p className="mb-8 font-[1.2rem] gradient-text">

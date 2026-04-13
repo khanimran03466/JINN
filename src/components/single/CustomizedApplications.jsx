@@ -23,7 +23,7 @@ const CustomizedApplications = () => {
               Sometimes off-the-shelf solutions don't quite fit.
               <span className="inline-icon">
                 <Image
-                  src="/images/customized-applications/icons/puzzle.png"
+                  src="/images/customized-applications/icons/Puzzle.png"
                   alt="CloudMojo Tech Logo"
                   width={40}
                   height={40}
@@ -32,7 +32,7 @@ const CustomizedApplications = () => {
               If you have specific data
               <span className="inline-icon">
                 <Image
-                  src="/images/customized-applications/icons/data.png"
+                  src="/images/customized-applications/icons/Data.png"
                   alt="DJINN Logo"
                   width={40}
                   height={40}

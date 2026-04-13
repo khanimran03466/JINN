@@ -49,11 +49,11 @@ const AboutUsPage = () => {
                 :
               </p>
 
-              <p className="!mb-15">
+              <p className="mb-15!">
                 To provide businesses and organizations with advanced technology
                 that simplifies complex data
                 <Image
-                  src="/images/about/data.png"
+                  src="/images/about/Data.png"
                   alt="data"
                   width={40}
                   height={40}
@@ -68,7 +68,7 @@ const AboutUsPage = () => {
                 />
                 data, we set out to create a solution
                 <Image
-                  src="/images/about/data.png"
+                  src="/images/about/Data.png"
                   alt="data"
                   width={40}
                   height={40}
@@ -97,7 +97,7 @@ const AboutUsPage = () => {
           <div className="our-mission-wrapper">
             <div className="our-mission">
               <div className="container">
-                <h2 className="!mb-8">
+                <h2 className="mb-8!">
                   Our <span className="gradient-text ">Mission</span>
                 </h2>
                 <p>

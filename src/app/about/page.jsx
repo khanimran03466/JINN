@@ -156,7 +156,7 @@ const AboutUsPage = () => {
                   </div>
                   <div className="content-sec">
                     <h2>Clarity in a Complex World</h2>
-                    <p>In today's information-rich environment, DJINN cuts through the noise, providing a clear and direct path to understanding your data, especially the unstructured kind.</p>
+                    <p>In today&apos;s information-rich environment, DJINN cuts through the noise, providing a clear and direct path to understanding your data, especially the unstructured kind.</p>
                   </div>
                 </div>
               </li>

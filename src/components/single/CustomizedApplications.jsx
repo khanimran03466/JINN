@@ -84,7 +84,7 @@ const CustomizedApplications = () => {
         <div className="kind-of-custom">
             <div className="container">
                 <div className="kind-of-custom-head">
-                    <h2 className="common-title text-center gradient-text !mb-3"> What Kind of Custom Applications Can We Build? </h2>
+                    <h2 className="common-title text-center gradient-text mb-3!"> What Kind of Custom Applications Can We Build? </h2>
                     <p> DJINN's versatile architecture and our team's expertise allow for a wide range of customized applications. Here are a few examples of how we can tailor AI to your specific needs </p>
                 </div>
                 <ul>

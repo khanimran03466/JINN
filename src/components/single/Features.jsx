@@ -82,7 +82,7 @@ const Features = () => {
                     <div className="content-sec">
                       <h3>Handwritten Text Recognition</h3>
                       <p>
-                         Read and analyze handwritten notes, even if they’re
+                         Read and analyze handwritten notes, even if they&apos;re
                         messy..
                       </p>
                     </div>
@@ -158,6 +158,7 @@ const Features = () => {
                 {IndustrySpecificTools.map((item, index) => (
                   <li key={index}>
                     <div className="">
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
                       <img src={item.imageUrl} alt={item.title} />
                       <div className="content-sec">
                         <h3 className="gradient-text">{item.title}</h3>

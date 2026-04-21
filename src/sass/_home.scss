@@ -211,7 +211,66 @@
 
   .animation-container {
     position: sticky;
-    top: 25px;
+    top: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @media (max-height: 850px) {
+      .common-title {
+        font-size: clamp(28px, 1.2vw + 1rem, 36px);
+        margin-bottom: 2px;
+      }
+
+      h3 {
+        font-size: 14px;
+        margin-bottom: 4px;
+      }
+
+      p {
+        font-size: 13px;
+        line-height: 1.1;
+      }
+
+      .flip-container-wrapper {
+        padding: 5px;
+        max-height: 50vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .mySwiper {
+          max-height: 100%;
+          width: auto;
+          aspect-ratio: 1234 / 878;
+        }
+
+        .card-content {
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          svg {
+            max-height: 45vh;
+            width: auto;
+          }
+        }
+      }
+
+      .bottom-cont {
+        p {
+          margin-bottom: 0.5rem !important;
+          font-size: 0.9rem !important;
+        }
+
+        .glowing-btn {
+          padding: 8px 24px;
+          font-size: 0.9rem;
+        }
+      }
+    }
   }
 }
 

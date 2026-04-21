@@ -1,0 +1,359 @@
+/* Intro Text */
+
+.page-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+
+.intro-text {
+    color: #F0F0F0;
+    font-size: 18px;
+    max-width: 820px;
+    margin-bottom: 40px;
+    font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Navigation */
+.resource-nav {
+    border-bottom: 1px solid #333;
+    margin-bottom: 41px;
+}
+
+.tabs {
+    display: flex;
+    gap: 30px;
+}
+
+.tab {
+    color: #707070;
+    cursor: pointer;
+    font-size: 24px;
+    font-weight: 500;
+    padding-bottom: 15px;
+    position: relative;
+    transition: 0.3s;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.tab.active {
+    background: linear-gradient(90deg, #0053F1 0%, #79DCF3 45.73%, #FFFFFF 100%);
+    background-clip: text;
+    color: transparent;
+    font-size: 24px;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+.tab.active::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: #4da3ff;
+}
+
+/* Section Header & Search Alignment */
+.section-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 50px;
+}
+
+.content-text h2 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #FFFFFF;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.subtitle {
+    color: #FFFFFF;
+    font-size: 16px;
+    max-width: 495px;
+    font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Search Bar */
+.search-bar {
+    display: flex;
+    background: #0C0C0E;
+    border: 1px solid #444;
+    border-radius: 50px;
+    padding: 1px;
+    width: 404px;
+    box-shadow: 0px 1.25px 14.94px 0px #8585858A inset;
+}
+
+.search-input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #E9E9E9;
+    padding: 0 14px;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.search-btn {
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 40px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+    background: linear-gradient(270deg, #0042BC 0%, #79DCF3 100%);
+    -webkit-backdrop-filter: blur(0.5663716793060303px);
+    backdrop-filter: blur(0.5663716793060303px);
+    max-width: 140px;
+    max-height: 46px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Card Grid */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(580px, 1fr));
+    gap: 12px;
+    padding-bottom: 100px;
+}
+
+.card {
+    background: #161616;
+    border-radius: 16px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.image-box {
+    height: 400px;
+    position: relative;
+}
+
+.card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.badge {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: linear-gradient(90deg, #0053F1 0%, #64D0E9 100%);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+.badge1 {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: linear-gradient(91.75deg, #FF85C0 12.25%, #0042BC 111.36%);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.overlay-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(92.97deg, rgba(248, 248, 248, 0.25) 0%, rgba(226, 226, 226, 0.28) 100%);
+    -webkit-backdrop-filter: blur(11.327433586120605px);
+    backdrop-filter: blur(11.327433586120605px);
+    border: 0.57px solid transparent;
+    border-image-source: linear-gradient(92.97deg, rgba(255, 255, 255, 0.57) 0%, rgba(217, 216, 216, 0.76) 100%);
+    border-image-slice: 1;
+}
+
+.title-small {
+    font-size: 18px;
+    font-weight: 600;
+    display: block;
+    color: #FFFFFF;
+}
+
+.date-small {
+    font-size: 16px;
+    font-weight: 400;
+    color: #FFFFFF;
+}
+
+.right-text {
+    font-size: 16px;
+    font-weight: 400;
+    opacity: 0.5;
+    color: #FFFFFF;
+}
+
+.card-body {
+    padding: 25px;
+}
+
+.card-body h3 {
+    font-size: 20px;
+    margin-bottom: 12px;
+    text-decoration: underline;
+    color: #FFFFFF;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.card-body p {
+
+    color: #FFFFFF;
+    font-size: 16px;
+    margin-bottom: 20px;
+    font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.read-more {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+
+
+/* --- RESPONSIVE BREAKPOINTS --- */
+
+/* 1. Large Laptops / Desktops (Up to 1200px) */
+@media (max-width: 1200px) {
+    .card-grid {
+        grid-template-columns: repeat(auto-fill, minmax(45%, 1fr));
+        gap: 10px;
+    }
+
+    .image-box {
+        height: 350px;
+    }
+}
+
+/* 2. Tablets & Small Laptops (Up to 992px) */
+@media (max-width: 992px) {
+    .page-container {
+        padding: 40px 30px;
+    }
+
+    .tabs {
+        gap: 20px;
+        overflow-x: auto;
+        /* Allows swiping if tabs are too long */
+        padding-bottom: 10px;
+    }
+
+    .tab {
+        font-size: 20px;
+        white-space: nowrap;
+    }
+
+    .section-controls {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .search-bar {
+        width: 100%;
+        /* Search bar takes full width on tablet */
+        max-width: 500px;
+    }
+}
+
+/* 3. Mobile Landscape & Phablets (Up to 768px) */
+@media (max-width: 768px) {
+    .intro-text {
+        font-size: 16px;
+    }
+
+    .card-grid {
+        grid-template-columns: 1fr;
+        /* Single column layout */
+    }
+
+    .image-box {
+        height: 300px;
+    }
+
+    .tab {
+        font-size: 18px;
+    }
+
+    .tab.active {
+        font-size: 18px;
+    }
+}
+
+
+
+/* 4. Small Mobile Devices (Up to 480px) */
+@media (max-width: 480px) {
+    .page-container {
+        padding: 30px 15px;
+    }
+
+    .content-text h2 {
+        font-size: 22px;
+    }
+
+    .subtitle {
+        font-size: 14px;
+    }
+
+    .overlay-text {
+        padding: 15px;
+        flex-direction: column;
+        align-items: flex-start;
+
+    }
+
+
+    .card-body h3 {
+        font-size: 18px;
+    }
+
+    .search-btn {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 488px) {
+    .overlay-text {
+        flex-direction: column;
+        justify-content: left;
+        align-items: start;
+    }
+
+
+}

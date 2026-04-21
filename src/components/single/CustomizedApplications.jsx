@@ -1,5 +1,7 @@
 import Hero from "../shared/Hero";
 import Image from "next/image";
+import OurApproach from "./OurApproach";
+import Link from "next/link";
 
 const CustomizedApplications = () => {
   return (
@@ -82,26 +84,44 @@ const CustomizedApplications = () => {
 
       <section>
         <div className="kind-of-custom">
-            <div className="container">
-                <div className="kind-of-custom-head">
-                    <h2 className="common-title text-center gradient-text mb-3!"> What Kind of Custom Applications Can We Build? </h2>
-                    <p> DJINN's versatile architecture and our team's expertise allow for a wide range of customized applications. Here are a few examples of how we can tailor AI to your specific needs </p>
-                </div>
-                <ul>
-                    <li>
-                        <Image src="/images/customized-applications/icons/Unique.png" alt="Unique Icon" width={48} height={48} />
-                        <p>Have a unique data processing challenge within your industry? We can develop AI models to automate specific tasks, extract niche insights, or integrate with your existing systems.</p>
-                    </li>
-                    <li>
-                        <Image src="/images/customized-applications/icons/Custom.png" alt="Custom Icon" width={48} height={48} />
-                        <p>Have a unique data processing challenge within your industry? We can develop AI models to automate specific tasks, extract niche insights, or integrate with your existing systems.</p>
-                    </li>
-                    <li>
-                        <Image src="/images/customized-applications/icons/Puzzle.png" alt="Puzzle Icon" width={48} height={48} />
-                        <p>Have a unique data processing challenge within your industry? We can develop AI models to automate specific tasks, extract niche insights, or integrate with your existing systems.</p>
-                    </li>
-                </ul>
+          <div className="container">
+            <div className="kind-of-custom-head">
+              <h2 className="common-title text-center gradient-text mb-3!"> What Kind of Custom Applications Can We Build? </h2>
+              <p> DJINN's versatile architecture and our team's expertise allow for a wide range of customized applications. Here are a few examples of how we can tailor AI to your specific needs </p>
             </div>
+            <ul>
+              <li>
+                <Image src="/images/customized-applications/icons/Unique.png" alt="Unique Icon" width={48} height={48} />
+                <p>Have a unique data processing challenge within your industry? We can develop AI models to automate specific tasks, extract niche insights, or integrate with your existing systems.</p>
+              </li>
+              <li>
+                <Image src="/images/customized-applications/icons/Custom.png" alt="Custom Icon" width={48} height={48} />
+                <p>Have a unique data processing challenge within your industry? We can develop AI models to automate specific tasks, extract niche insights, or integrate with your existing systems.</p>
+              </li>
+              <li>
+                <Image src="/images/customized-applications/icons/Puzzle.png" alt="Puzzle Icon" width={48} height={48} />
+                <p>Have a unique data processing challenge within your industry? We can develop AI models to automate specific tasks, extract niche insights, or integrate with your existing systems.</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div className="container">
+          <div className="our-approach">
+            <div className="approach-stick">
+              <div className="approch-head mb-12 text-center">
+                <h2 className="common-title text-center gradient-text mb-3!"> Our Approach to Customization </h2>
+                <p> Your Vision, Our Expertise. </p>
+              </div>
+              <OurApproach />
+              <div className="button-sec text-center">
+                <p className="mb-8">Ready to Explore Custom AI for Your Business?</p>
+                <Link href="/contact" className="glowing-btn">Contact Us</Link>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 

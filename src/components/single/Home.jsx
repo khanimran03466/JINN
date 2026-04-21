@@ -191,7 +191,7 @@ const Home = () => {
         <div className="container">
           <div className="">
             <div className="who-its-for">
-              <div className="animation-container h-screen">
+              <div className="animation-container">
                 <h2 className="common-title gradient-text">Who It's For</h2>
                 <h3>
                   Built for enterprises where unstructured data drives critical

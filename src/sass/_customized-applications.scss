@@ -28,3 +28,39 @@
 .kind-of-custom-head {
   margin-bottom: 45px;
 }
+
+
+.our-approach {
+  max-width: 1080px;
+  margin: auto;
+  height: 300vh;
+
+  p {
+    font-size: 18px;
+  }
+
+  .approach-stick {
+    position: sticky;
+    top: 60px;
+    padding: 20px 0;
+  }
+
+
+
+  // Default inactive states (GSAP overrides on scroll)
+  .card {
+    fill: #1a1a2e;
+  }
+
+  .line {
+    fill: #3a3a5c;
+  }
+
+  .card-text-one,
+  .card-text-two,
+  .card-text-three,
+  .card-text-four,
+  .card-text-five {
+    fill: #555;
+  }
+}

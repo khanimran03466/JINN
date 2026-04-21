@@ -120,7 +120,7 @@ const AboutUsPage = () => {
       <section>
         <div className="container">
           <div className="our-values">
-            <h2 className="common-title text-center gradient-text !mb-20">The Problem Djinn Solves </h2>
+            <h2 className="common-title text-center gradient-text mb-20!">The Problem Djinn Solves </h2>
             <ul>
               <li>
                 <Image src="/images/about/icons/i90.svg" alt="i90" width={286} height={179} />

@@ -3,7 +3,6 @@
 
 import { useState } from "react";
 import Hero from "../shared/Hero";
-import VideoPlay from "../shared/VideoPlay";
 import { ResourcesData } from "../../app/data";
 import Link from "next/link";
 
@@ -83,11 +82,7 @@ const Resources = () => {
                             filteredData.map(item => (
                                 <div className="card" key={item.id}>
                                     <div className="image-box">
-                                        {item.thumbnail.type === "video" ? (
-                                            <VideoPlay videoUrl={item.thumbnail.url} className="card-img" />
-                                        ) : (
-                                            <img src={item.thumbnail.url} alt={item.title} className="card-img" />
-                                        )}
+                                        <img src={item.thumbnail.url} alt={item.title} className="card-img" />
                                         <span className={`badge ${item.category === "Whitepapers" ? "badge1" : ""}`}>{item.badge}</span>
                                         <div className="overlay-text">
                                             <div className="left-text">

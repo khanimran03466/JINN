@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import VideoPlay from "../shared/VideoPlay";
 import { ResourcesData } from "../../app/data";
 import { FaLinkedin, FaGithub, FaTwitter, FaFacebook } from "react-icons/fa";
 
@@ -58,11 +57,7 @@ const ResourceDetail = ({ data }) => {
 
                 {/* Hero Section */}
                 <div className="detail-hero">
-                    {data.thumbnail.type === "video" ? (
-                        <VideoPlay videoUrl={data.thumbnail.url} className="hero-img" />
-                    ) : (
-                        <img src={data.thumbnail.url} alt={data.title} className="hero-img" />
-                    )}
+                    <img src={data.thumbnail.url} alt={data.title} className="hero-img" />
                 </div>
 
                 {/* Content Sections */}
@@ -126,11 +121,7 @@ const ResourceDetail = ({ data }) => {
                             <Link href={`/resources/${item.slug}`} key={item.id} className="card-link">
                                 <div className="card">
                                     <div className="image-box">
-                                        {item.thumbnail.type === "video" ? (
-                                            <VideoPlay videoUrl={item.thumbnail.url} className="card-img" />
-                                        ) : (
-                                            <img src={item.thumbnail.url} alt={item.title} className="card-img" />
-                                        )}
+                                        <img src={item.thumbnail.url} alt={item.title} className="card-img" />
                                         <span className={`badge ${item.category === "Whitepapers" ? "badge1" : ""}`}>{item.badge}</span>
                                         <div className="overlay-text">
                                             <div className="left-text">

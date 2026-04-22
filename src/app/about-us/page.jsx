@@ -194,7 +194,7 @@ const AboutUsPage = () => {
 
       <section>
         <div className="container">
-          <div className="your-success grid grid-cols-2 gap-2">
+          <div className="your-success grid grid-cols-1 md:grid-cols-2  gap-20">
             <div className="left-sec">
               <h2 className="common-title">Your Success is <span className="gradient-text">Our Priority</span></h2>
               <p className="common-desc">We aim to be more than just a technology provider; we want to be your partner in realizing the potential of your data. We are committed to providing excellent support and working closely with you to ensure DJINN meets your specific needs and helps you achieve your objectives.</p>

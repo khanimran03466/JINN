@@ -62,6 +62,14 @@
     column-gap: 14rem;
     z-index: 1;
 
+    @media (max-width: 1200px) {
+      column-gap: 5rem;
+    }
+    @media (max-width: 768px) {
+      column-gap: 2rem;
+      row-gap: 2.5rem;
+    }
+
     li {
       flex: none;
 
@@ -111,6 +119,10 @@
     display: flex;
     flex-wrap: wrap;
 
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
+
     li {
       //   background: linear-gradient(
       //     180deg,
@@ -123,6 +135,10 @@
       display: flex;
       gap: inherit;
 
+      @media (max-width: 768px) {
+        flex-direction: column;
+      }
+
       .card {
         background: #131313;
         border-radius: inherit;
@@ -130,6 +146,10 @@
         overflow: hidden;
         height: 415px;
         position: relative;
+
+        @media (max-width: 768px) {
+          height: auto;
+        }
 
         video {
           width: 100%;
@@ -140,6 +160,11 @@
           bottom: 0;
           left: 0;
           z-index: 0;
+
+          @media (max-width: 768px) {
+            position: static;
+            height: auto;
+          }
         }
 
         .content-wrapper {
@@ -167,19 +192,31 @@
 
       .card:first-child {
         flex: 0.6;
+        @media (max-width: 768px) {
+          flex: 1;
+        }
       }
 
       .card:last-child {
         flex: 0.4;
+        @media (max-width: 768px) {
+          flex: 1;
+        }
       }
 
       &:nth-child(even) {
         .card:last-child {
           flex: 0.6;
+          @media (max-width: 768px) {
+            flex: 1;
+          }
         }
 
         .card:first-child {
           flex: 0.4;
+          @media (max-width: 768px) {
+            flex: 1;
+          }
         }
       }
     }
@@ -221,7 +258,7 @@
     flex-direction: column;
     justify-content: center;
 
-    @media (max-height: 850px) {
+    @media (max-height: 850px), (max-width: 768px) {
       .common-title {
         font-size: clamp(28px, 1.2vw + 1rem, 36px);
         margin-bottom: 2px;
@@ -256,8 +293,9 @@
           justify-content: center;
 
           svg {
-            max-height: 50vh;
+            max-height: 40vh;
             width: auto;
+            max-width: 100%;
           }
         }
       }

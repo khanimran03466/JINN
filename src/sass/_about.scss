@@ -5,7 +5,7 @@
 
   .driven-head {
     h2 {
-      font-size: clamp(42px, 3vw, 54px);
+      font-size: clamp(32px, 3vw + 1rem, 54px);
       font-weight: 600;
       line-height: 1.2;
 
@@ -15,7 +15,7 @@
     }
 
     p {
-      font-size: clamp(28px, 30px, 32px);
+      font-size: clamp(20px, 2.5vw + 1rem, 32px);
       font-weight: 500;
       display: block;
       line-height: 1.5;
@@ -38,14 +38,14 @@
     text-align: center;
 
     h2 {
-      font-size: clamp(42px, 52px, 52px);
+      font-size: clamp(32px, 4vw + 1rem, 52px);
       font-weight: 600;
       line-height: 1.2;
       margin: 0;
     }
 
     p {
-      font-size: clamp(12px, 20px, 24px);
+      font-size: clamp(14px, 1.5vw + 10px, 24px);
       font-weight: 400;
       display: block;
       line-height: 1.5;
@@ -80,6 +80,11 @@
     flex-wrap: wrap;
     text-align: center;
     justify-content: space-between;
+
+    @media (max-width: 768px) {
+      gap: 30px;
+      justify-content: center;
+    }
   }
 }
 
@@ -110,7 +115,7 @@
 
   ul {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 20px;
 
     li {
@@ -125,14 +130,14 @@
           padding: 1rem;
 
           h2 {
-            font-size: clamp(24px, 20px, 20px);
+            font-size: clamp(20px, 1.5vw + 12px, 20px);
             font-weight: 600;
             line-height: 1.2;
             margin-bottom: 5px;
           }
 
           p {
-            font-size: 16px;
+            font-size: 14px;
           }
         }
 
@@ -152,7 +157,7 @@
 
   .left-sec {
     h2 {
-      font-size: clamp(42px, 5vw + 1rem, 54px);
+      font-size: clamp(32px, 4vw + 1rem, 54px);
       font-weight: 600;
       line-height: 1.2;
       text-align: left;

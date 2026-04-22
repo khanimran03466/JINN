@@ -1,8 +1,16 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 
 const Header = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <header>
       <div className="container">
@@ -19,38 +27,44 @@ const Header = () => {
               </Link>
             </div>
 
-            <nav>
+            <nav className={`main-nav ${isMenuOpen ? "open" : ""}`}>
               <ul>
                 <li>
-                  {" "}
-                  <Link href="/features">Features</Link>{" "}
+                  <Link href="/features" onClick={() => setIsMenuOpen(false)}>Features</Link>
                 </li>
                 <li>
-                  {" "}
-                  <Link href="/customized-applications">
-                    {" "}
-                    Customized Applications{" "}
-                  </Link>{" "}
+                  <Link href="/customized-applications" onClick={() => setIsMenuOpen(false)}>
+                    Customized Applications
+                  </Link>
                 </li>
                 <li>
-                  {" "}
-                  <Link href="/resources">Resources</Link>{" "}
+                  <Link href="/resources" onClick={() => setIsMenuOpen(false)}>Resources</Link>
                 </li>
                 <li>
-                  {" "}
-                  <Link href="/about-us">About Us</Link>{" "}
+                  <Link href="/about-us" onClick={() => setIsMenuOpen(false)}>About Us</Link>
                 </li>
                 <li>
-                  {" "}
-                  <Link href="/contact-us">Contact Us</Link>{" "}
+                  <Link href="/contact-us" onClick={() => setIsMenuOpen(false)}>Contact Us</Link>
+                </li>
+                <li className="mobile-only-btn">
+                  <Link href="/get-started" className="glowing-btn" onClick={() => setIsMenuOpen(false)}>
+                    Free Demo
+                  </Link>
                 </li>
               </ul>
             </nav>
           </div>
+          
           <div className="header-right">
-            <Link href="/get-started" className="glowing-btn">
+            <Link href="/get-started" className="glowing-btn desktop-only-btn">
               Free Demo
             </Link>
+            
+            <button className="hamburger-menu" onClick={toggleMenu} aria-label="Toggle menu">
+              <span className={`hamburger-line ${isMenuOpen ? "open" : ""}`}></span>
+              <span className={`hamburger-line ${isMenuOpen ? "open" : ""}`}></span>
+              <span className={`hamburger-line ${isMenuOpen ? "open" : ""}`}></span>
+            </button>
           </div>
         </div>
       </div>

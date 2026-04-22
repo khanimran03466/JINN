@@ -61,6 +61,10 @@ svg {
   max-width: 100%;
   margin-inline: auto;
   padding-inline: 2rem;
+
+  @media (max-width: 768px) {
+    padding-inline: 1rem;
+  }
 }
 
 section {
@@ -230,14 +234,32 @@ section {
     margin-bottom: 25px;
     align-items: flex-end;
 
+    @media (max-width: 1200px) {
+      gap: 15rem;
+    }
+
+    @media (max-width: 992px) {
+      flex-direction: column;
+      gap: 2rem;
+      align-items: flex-start;
+      justify-content: flex-end;
+    }
+
     >div:first-child {
       flex: 0 0 20%;
+      @media (max-width: 992px) {
+        flex: none;
+        width: 100%;
+      }
     }
 
     h1 {
       font-size: clamp(54px, 3vw + 1rem, 4.25rem);
       color: #fff;
       font-weight: 600;
+      @media (max-width: 768px) {
+        font-size: clamp(36px, 8vw, 54px);
+      }
     }
 
     p {
@@ -245,6 +267,10 @@ section {
       font-weight: 600;
       line-height: 1.3;
       margin-bottom: 25px;
+      @media (max-width: 768px) {
+        font-size: 18px;
+        margin-bottom: 15px;
+      }
     }
 
     .glowing-btn.white-btn {

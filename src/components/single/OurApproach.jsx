@@ -65,8 +65,8 @@ const OurApproach = (props) => {
     return (
         <div ref={container} className="mb-22">
             <svg
-                width={1073}
-                height={356}
+                width="100%"
+                height="auto"
                 viewBox="0 0 1073 356"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"

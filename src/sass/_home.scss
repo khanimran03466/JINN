@@ -4,7 +4,8 @@
 }
 
 .opportunities__title {
-  line-height: 1.6; /* Adds enough space for icons between lines */
+  line-height: 1.6;
+  /* Adds enough space for icons between lines */
   display: block;
   font-size: clamp(24px, 2vw + 1rem, 2rem);
 }
@@ -12,13 +13,17 @@
 .inline-icon {
   display: inline-flex;
   align-items: center;
-  vertical-align: middle; /* Aligns the icon with the center of the text */
-  margin: 0 4px; /* Adds a tiny bit of breathing room around icons */
+  vertical-align: middle;
+  /* Aligns the icon with the center of the text */
+  margin: 0 4px;
+  /* Adds a tiny bit of breathing room around icons */
 }
 
 .inline-icon img {
-  width: auto; /* Maintains aspect ratio */
-  height: 1.2em; /* Scales the icon relative to the text size! */
+  width: auto;
+  /* Maintains aspect ratio */
+  height: 1.2em;
+  /* Scales the icon relative to the text size! */
 }
 
 .why-djinn {
@@ -86,7 +91,8 @@
     transform: translate(-50%, -50%);
     width: 100%;
     height: 100%;
-    z-index: 0; /* Place behind content */
+    z-index: 0;
+    /* Place behind content */
     display: flex;
     justify-content: center;
   }
@@ -140,11 +146,9 @@
           padding: 1.25rem;
           position: relative;
           z-index: 1;
-          background: linear-gradient(
-            180deg,
-            #131313 71.04%,
-            rgba(19, 19, 19, 0) 100%
-          );
+          background: linear-gradient(180deg,
+              #131313 71.04%,
+              rgba(19, 19, 19, 0) 100%);
 
           h2 {
             font-size: clamp(22px, 1.5vw + 14px, 18px);
@@ -230,7 +234,6 @@
 
       p {
         font-size: 13px;
-        line-height: 1.1;
       }
 
       .flip-container-wrapper {
@@ -253,7 +256,7 @@
           justify-content: center;
 
           svg {
-            max-height: 45vh;
+            max-height: 50vh;
             width: auto;
           }
         }
@@ -261,13 +264,13 @@
 
       .bottom-cont {
         p {
-          margin-bottom: 0.5rem !important;
-          font-size: 0.9rem !important;
+          margin-bottom: 1.5rem !important;
+          font-size: 1rem !important;
         }
 
         .glowing-btn {
-          padding: 8px 24px;
-          font-size: 0.9rem;
+          padding: 10px 26px;
+          font-size: 1rem;
         }
       }
     }
@@ -281,9 +284,11 @@
 .flip-card {
   background-color: transparent;
 
-  perspective: 1500px; /* Essential for 3D effect */
+  perspective: 1500px;
+  /* Essential for 3D effect */
   margin-bottom: 40px;
-  min-height: 560px; /* Ensures enough space for the flip animation */
+  min-height: 560px;
+  /* Ensures enough space for the flip animation */
 
   svg {
     max-width: 100%;
@@ -297,7 +302,8 @@
   height: 100%;
   text-align: center;
   transition: transform 0.6s;
-  transform-style: preserve-3d; /* Allows children to live in 3D space */
+  transform-style: preserve-3d;
+  /* Allows children to live in 3D space */
 }
 
 .flip-card-front,
@@ -305,7 +311,8 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  backface-visibility: hidden; /* Hides the reverse side */
+  backface-visibility: hidden;
+  /* Hides the reverse side */
   border-radius: 40px;
 }
 
@@ -319,7 +326,8 @@
 }
 
 .flip-card-back {
-  transform: rotationY(180deg); /* Pre-flipped so it faces away initially */
+  transform: rotationY(180deg);
+  /* Pre-flipped so it faces away initially */
 }
 
 .closer-heading {

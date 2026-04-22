@@ -170,12 +170,12 @@ const Footer = () => {
           DJINN.AI
         </h1> */}
 
-        <Image
+        {/* <Image
           src="/images/footer-jinn.svg"
           alt="Footer D-Jinn Text"
           width={1920}
           height={1080}
-        />
+        /> */}
       </div>
     </footer>
   );

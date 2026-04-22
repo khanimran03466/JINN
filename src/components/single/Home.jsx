@@ -1,7 +1,13 @@
 import React from "react";
 import Hero from "../shared/Hero";
 import Image from "next/image";
-import WhyDjinn from "../svgs/home/WhyDjinn";
+import dynamic from "next/dynamic";
+
+const WhyDjinn = dynamic(() => import("../svgs/home/WhyDjinn"), {
+  loading: () => (
+    <div className="w-[638px] h-[638px] max-w-full rounded-full animate-pulse blur-3xl opacity-50 bg-gradient-to-tr from-[#0042BC] via-[#79DCF3] to-[#FF85C0]"></div>
+  ),
+});
 import VideoPlay from "../shared/VideoPlay";
 import { HomeKeyFeatures, HomeCloserLookData } from "@/app/data";
 import Link from "next/link";
@@ -245,8 +251,8 @@ const Home = () => {
                 <div
                   key={index}
                   className={`relative rounded-[30px] overflow-hidden min-h-[400px] lg:min-h-[500px] flex ${item.type === "text"
-                      ? "bg-[#222222] p-8 lg:p-12 flex-col justify-between"
-                      : "w-full h-full"
+                    ? "bg-[#222222] p-8 lg:p-12 flex-col justify-between"
+                    : "w-full h-full"
                     }`}
                 >
                   {item.type === "text" ? (

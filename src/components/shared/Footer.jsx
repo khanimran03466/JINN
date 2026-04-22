@@ -1,7 +1,15 @@
-import React from "react";
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+import Image from "next/image";
+
 
 const Footer = () => {
+  const pathname = usePathname();
+
+  const activeClass = "text-transparent bg-clip-text bg-gradient-to-r from-[#79DCF3] to-[#0042BC] font-medium after:absolute after:bottom-0 after:left-0 after:w-full after:h-[1px] after:bg-gradient-to-r after:from-[#79DCF3] after:to-[#0042BC]";
+  const inactiveClass = "text-gray-400 font-light hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-[#79DCF3] hover:to-[#0042BC] hover:font-medium after:absolute after:bottom-0 after:left-0 after:w-full after:h-[1px] after:bg-transparent hover:after:bg-gradient-to-r hover:after:from-[#79DCF3] hover:after:to-[#0042BC]";
   return (
     <footer className="bg-[#121212] pt-16 mt-auto overflow-hidden relative">
       <div className="container mx-auto px-6 md:px-8 max-w-[1100px]">
@@ -105,19 +113,19 @@ const Footer = () => {
               "About Us",
               "Privacy Policy",
               "Terms & Conditions",
-            ].map((item, index) => (
-              <Link
-                key={index}
-                href={`#${item.toLowerCase().replace(/ /g, "-")}`}
-                className={`transition-colors relative pb-[2px] ${
-                  item === "Home"
-                    ? "text-transparent bg-clip-text bg-gradient-to-r from-[#79DCF3] to-[#0042BC] font-medium after:absolute after:bottom-0 after:left-0 after:w-full after:h-[1px] after:bg-gradient-to-r after:from-[#79DCF3] after:to-[#0042BC]"
-                    : "text-gray-400 hover:text-white font-light hover:underline underline-offset-4 decoration-gray-500"
-                }`}
-              >
-                {item}
-              </Link>
-            ))}
+            ].map((item, index) => {
+              const linkHref = item === "Home" ? "/" : `/${item.toLowerCase().replace(/ /g, "-")}`;
+              const isActive = pathname === linkHref;
+              return (
+                <Link
+                  key={index}
+                  href={linkHref}
+                  className={`transition-all duration-300 relative pb-[2px] ${isActive ? activeClass : inactiveClass}`}
+                >
+                  {item}
+                </Link>
+              );
+            })}
           </div>
         </div>
 
@@ -125,7 +133,7 @@ const Footer = () => {
         <hr className="border-gray-800 mb-8" />
 
         {/* Middle Section (Info & Copyright) */}
-        <div className="flex flex-col md:flex-row justify-between items-center text-[13px] md:text-sm text-gray-400 gap-4 md:gap-0 lg:px-4 relative z-10">
+        <div className="flex flex-col md:flex-row justify-between items-center text-[13px] md:text-sm text-gray-400 gap-4 md:gap-0 lg:px-4 relative z-10 mb-8">
           <p>
             Product of{" "}
             <span className="text-gray-200 font-medium">CloudMojo!</span>
@@ -136,17 +144,16 @@ const Footer = () => {
           </p>
           <p>
             All Rights Reserved ©{" "}
-            <span className="text-gray-200 font-medium">2026</span>
+            {/* <span className="text-gray-200 font-medium">2026 </span> */}
+            <span className="text-gray-200 font-medium">{new Date().getFullYear()} </span>
           </p>
         </div>
       </div>
 
       {/* Bottom Huge DJINN TEXT */}
       <div
-        className="w-full flex justify-center items-end mt-4 mb-[-5%] overflow-hidden relative z-0"
-        style={{ height: "clamp(100px, 18vw, 300px)" }}
       >
-        <h1
+        {/* <h1
           className="text-center font-black leading-none m-0"
           style={{
             fontSize: "clamp(120px, 22vw, 400px)",
@@ -161,7 +168,14 @@ const Footer = () => {
           }}
         >
           DJINN.AI
-        </h1>
+        </h1> */}
+
+        <Image
+          src="/images/footer-jinn.svg"
+          alt="Footer"
+          width={1920}
+          height={1080}
+        />
       </div>
     </footer>
   );

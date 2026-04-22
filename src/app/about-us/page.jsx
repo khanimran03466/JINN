@@ -5,6 +5,11 @@ import Link from "next/link";
 import OurMission from "@/components/svgs/about/OurMission";
 import YourSuccess from "@/components/svgs/about/YourSuccess";
 
+export const metadata = {
+  title: "About Us",
+  description: "Learn more about CloudMojo Tech and how DJINN is driven by innovation to focus on your success.",
+};
+
 const AboutUsPage = () => {
   return (
     <>

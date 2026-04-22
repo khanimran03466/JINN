@@ -172,7 +172,7 @@ const Footer = () => {
 
         <Image
           src="/images/footer-jinn.svg"
-          alt="Footer"
+          alt="Footer D-Jinn Text"
           width={1920}
           height={1080}
         />

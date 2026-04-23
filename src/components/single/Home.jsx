@@ -236,6 +236,7 @@ const Home = () => {
                 <span>
                   {" "}
                   <Image
+                    style={{ "display": "inline" }}
                     src="/images/home/small-djinn-logo.svg"
                     width={60}
                     height={34}

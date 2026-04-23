@@ -5,24 +5,32 @@ import React, { useEffect, useState } from "react";
 const CustomCursor = () => {
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [isClicked, setIsClicked] = useState(false);
+  const [isAnimating, setIsAnimating] = useState(false);
   const [isHovering, setIsHovering] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     const updatePosition = (e) => {
-      setPosition({ x: e.clientX, y: e.clientY + 25 });
+      setPosition({ x: e.clientX, y: e.clientY + 20 });
       if (!isVisible) setIsVisible(true);
     };
 
-    const handleMouseDown = () => setIsClicked(true);
+    const handleMouseDown = () => {
+      setIsClicked(true);
+      setIsAnimating(true);
+      setTimeout(() => setIsAnimating(false), 400); // Match SCSS animation duration
+    };
     const handleMouseUp = () => setIsClicked(false);
-
+    const handleMouseEnterWindow = () => setIsVisible(true);
+    const handleMouseLeaveWindow = () => setIsVisible(false);
     const handleMouseEnterLink = () => setIsHovering(true);
     const handleMouseLeaveLink = () => setIsHovering(false);
 
     window.addEventListener("mousemove", updatePosition);
     window.addEventListener("mousedown", handleMouseDown);
     window.addEventListener("mouseup", handleMouseUp);
+    document.addEventListener("mouseenter", handleMouseEnterWindow);
+    document.addEventListener("mouseleave", handleMouseLeaveWindow);
 
     // Initial check for interactive elements
     const updateInteractiveListeners = () => {
@@ -42,6 +50,8 @@ const CustomCursor = () => {
       window.removeEventListener("mousemove", updatePosition);
       window.removeEventListener("mousedown", handleMouseDown);
       window.removeEventListener("mouseup", handleMouseUp);
+      document.removeEventListener("mouseenter", handleMouseEnterWindow);
+      document.removeEventListener("mouseleave", handleMouseLeaveWindow);
       clearInterval(interval);
 
       const interactiveElements = document.querySelectorAll("a, button, .glowing-btn, .hamburger-menu, .back-to-top");
@@ -65,7 +75,7 @@ const CustomCursor = () => {
 
   return (
     <div
-      className={`custom-cursor-wrapper ${isVisible ? "visible" : ""} ${isClicked ? "clicked" : ""} ${isHovering ? "hovering" : ""}`}
+      className={`custom-cursor-wrapper ${isVisible ? "visible" : ""} ${isClicked ? "clicked" : ""} ${isAnimating ? "animating" : ""} ${isHovering ? "hovering" : ""}`}
       style={{
         left: `${position.x}px`,
         top: `${position.y}px`,

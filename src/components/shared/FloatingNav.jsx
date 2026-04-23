@@ -2,10 +2,14 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { HiArrowUp } from "react-icons/hi2";
 
 const FloatingNav = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const pathname = usePathname();
+
+  const isActive = (path) => pathname === path;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -35,16 +39,16 @@ const FloatingNav = () => {
         <nav className="floating-links">
           <ul>
             <li>
-              <Link href="/features">Features</Link>
+              <Link href="/features" className={isActive("/features") ? "active" : ""}>Features</Link>
             </li>
             <li>
-              <Link href="/customized-applications">Customized Application</Link>
+              <Link href="/customized-applications" className={isActive("/customized-applications") ? "active" : ""}>Customized Application</Link>
             </li>
             <li>
-              <Link href="/resources">Resources</Link>
+              <Link href="/resources" className={isActive("/resources") ? "active" : ""}>Resources</Link>
             </li>
             <li>
-              <Link href="/about-us">About Us</Link>
+              <Link href="/about-us" className={isActive("/about-us") ? "active" : ""}>About Us</Link>
             </li>
           </ul>
         </nav>

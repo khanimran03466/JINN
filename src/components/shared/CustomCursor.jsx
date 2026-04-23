@@ -34,7 +34,9 @@ const CustomCursor = () => {
 
     // Initial check for interactive elements
     const updateInteractiveListeners = () => {
-      const interactiveElements = document.querySelectorAll("a, button, .glowing-btn, .hamburger-menu, .back-to-top");
+      const interactiveElements = document.querySelectorAll(
+        "a, button, .glowing-btn, .hamburger-menu, .back-to-top, .primary-btn, .btn-primary, input[type='submit'], input[type='button'], [role='button']"
+      );
       interactiveElements.forEach((el) => {
         el.addEventListener("mouseenter", handleMouseEnterLink);
         el.addEventListener("mouseleave", handleMouseLeaveLink);
@@ -54,7 +56,9 @@ const CustomCursor = () => {
       document.removeEventListener("mouseleave", handleMouseLeaveWindow);
       clearInterval(interval);
 
-      const interactiveElements = document.querySelectorAll("a, button, .glowing-btn, .hamburger-menu, .back-to-top");
+      const interactiveElements = document.querySelectorAll(
+        "a, button, .glowing-btn, .hamburger-menu, .back-to-top, .primary-btn, .btn-primary, input[type='submit'], input[type='button'], [role='button']"
+      );
       interactiveElements.forEach((el) => {
         el.removeEventListener("mouseenter", handleMouseEnterLink);
         el.removeEventListener("mouseleave", handleMouseLeaveLink);

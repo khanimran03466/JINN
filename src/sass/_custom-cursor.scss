@@ -7,8 +7,12 @@ body {
   [role="button"],
   .glowing-btn,
   .hamburger-menu,
-  .back-to-top {
-    cursor: none !important;
+  .back-to-top,
+  .primary-btn,
+  .btn-primary,
+  input[type="submit"],
+  input[type="button"] {
+    cursor: pointer !important;
   }
 }
 
@@ -66,8 +70,9 @@ body {
   }
 
   &.hovering {
+    opacity: 0;
     .cursor-main {
-      transform: scale(1.2) rotate(0deg);
+      transform: scale(1.2) rotate(18deg);
     }
   }
 

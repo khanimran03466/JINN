@@ -3,9 +3,13 @@
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
+import { usePathname } from "next/navigation";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const pathname = usePathname();
+
+  const isActive = (path) => pathname === path;
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -30,24 +34,24 @@ const Header = () => {
             <nav className={`main-nav ${isMenuOpen ? "open" : ""}`}>
               <ul>
                 <li>
-                  <Link href="/features" onClick={() => setIsMenuOpen(false)}>Features</Link>
+                  <Link href="/features" className={isActive("/features") ? "active" : ""} onClick={() => setIsMenuOpen(false)}>Features</Link>
                 </li>
                 <li>
-                  <Link href="/customized-applications" onClick={() => setIsMenuOpen(false)}>
+                  <Link href="/customized-applications" className={isActive("/customized-applications") ? "active" : ""} onClick={() => setIsMenuOpen(false)}>
                     Customized Applications
                   </Link>
                 </li>
                 <li>
-                  <Link href="/resources" onClick={() => setIsMenuOpen(false)}>Resources</Link>
+                  <Link href="/resources" className={isActive("/resources") ? "active" : ""} onClick={() => setIsMenuOpen(false)}>Resources</Link>
                 </li>
                 <li>
-                  <Link href="/about-us" onClick={() => setIsMenuOpen(false)}>About Us</Link>
+                  <Link href="/about-us" className={isActive("/about-us") ? "active" : ""} onClick={() => setIsMenuOpen(false)}>About Us</Link>
                 </li>
                 <li>
-                  <Link href="/contact-us" onClick={() => setIsMenuOpen(false)}>Contact Us</Link>
+                  <Link href="/contact-us" className={isActive("/contact-us") ? "active" : ""} onClick={() => setIsMenuOpen(false)}>Contact Us</Link>
                 </li>
                 <li className="mobile-only-btn">
-                  <Link href="/get-started" className="glowing-btn" onClick={() => setIsMenuOpen(false)}>
+                  <Link href="/get-started" className={`glowing-btn ${isActive("/get-started") ? "active" : ""}`} onClick={() => setIsMenuOpen(false)}>
                     Free Demo
                   </Link>
                 </li>

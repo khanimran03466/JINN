@@ -60,10 +60,12 @@ const Header = () => {
               Free Demo
             </Link>
             
-            <button className="hamburger-menu" onClick={toggleMenu} aria-label="Toggle menu">
-              <span className={`hamburger-line ${isMenuOpen ? "open" : ""}`}></span>
-              <span className={`hamburger-line ${isMenuOpen ? "open" : ""}`}></span>
-              <span className={`hamburger-line ${isMenuOpen ? "open" : ""}`}></span>
+            <button className={`hamburger-menu ${isMenuOpen ? "open" : ""}`} onClick={toggleMenu} aria-label="Toggle menu">
+              <div className="hamburger-box">
+                <span className="hamburger-line"></span>
+                <span className="hamburger-line"></span>
+                <span className="hamburger-line"></span>
+              </div>
             </button>
           </div>
         </div>

@@ -195,6 +195,11 @@
                         cursor: not-allowed;
                         transform: none;
                     }
+
+                    @media (max-width: 600px) {
+                        width: 100%;
+                        justify-content: center;
+                    }
                 }
 
                 .form-status {
@@ -267,12 +272,20 @@
                 color: #888;
                 font-weight: 500;
                 margin: 0;
+
+                @media (max-width: 600px) {
+                    font-size: 2rem;
+                }
             }
 
             h3 {
                 font-size: 3rem;
                 font-weight: 600;
                 margin: 0;
+
+                @media (max-width: 600px) {
+                    font-size: 2rem;
+                }
 
                 span {
                     font-style: italic;

@@ -92,7 +92,8 @@ section {
   box-shadow: $shadow-sm;
 }
 
-.glowing-btn {
+.glowing-btn,
+.hamburger-menu {
   text-decoration: none;
   cursor: pointer;
   position: relative;
@@ -247,6 +248,7 @@ section {
 
     >div:first-child {
       flex: 0 0 20%;
+
       @media (max-width: 992px) {
         flex: none;
         width: 100%;
@@ -257,6 +259,7 @@ section {
       font-size: clamp(54px, 3vw + 1rem, 4.25rem);
       color: #fff;
       font-weight: 600;
+
       @media (max-width: 768px) {
         font-size: clamp(36px, 8vw, 54px);
       }
@@ -267,6 +270,7 @@ section {
       font-weight: 600;
       line-height: 1.3;
       margin-bottom: 25px;
+
       @media (max-width: 768px) {
         font-size: 18px;
         margin-bottom: 15px;

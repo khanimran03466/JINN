@@ -1,6 +1,10 @@
 import "../sass/styles.scss";
 import Header from "@/components/shared/Header";
 import Footer from "@/components/shared/Footer";
+import FloatingNav from "@/components/shared/FloatingNav";
+import CustomCursor from "@/components/shared/CustomCursor";
+
+
 
 export const metadata = {
   title: {
@@ -25,8 +29,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className="h-full antialiased">
       <body className="min-h-full flex flex-col">
+        <CustomCursor />
         <Header />
         <main className="flex-grow">{children}</main>
+        <FloatingNav />
         <Footer />
       </body>
     </html>

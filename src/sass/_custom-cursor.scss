@@ -1,0 +1,99 @@
+html,
+body {
+  cursor: none !important;
+
+  a,
+  button,
+  [role="button"],
+  .glowing-btn,
+  .hamburger-menu,
+  .back-to-top {
+    cursor: none !important;
+  }
+}
+
+.custom-cursor-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 99999;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+
+  &.visible {
+    opacity: 1;
+  }
+
+  .cursor-main {
+    position: relative;
+    z-index: 2;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      width: 24px;
+      height: 24px;
+      display: block;
+    }
+
+    .cursor-sparks {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+
+      .spark {
+        position: absolute;
+        top: -40%; // Near the tip
+        left: 28%; // Near the tip
+        width: 1.5px;
+        height: 6px;
+        background: #fff;
+        border-radius: 10px;
+        opacity: 0;
+        transform-origin: bottom center;
+      }
+    }
+  }
+
+  &.hovering {
+    .cursor-main {
+      transform: scale(1.2) rotate(0deg);
+    }
+  }
+
+  &.clicked {
+    .spark {
+      animation: sparkEffect 0.4s ease-out forwards;
+    }
+
+    .cursor-main {
+      transform: scale(0.9);
+      transition: transform 0.15s ease;
+    }
+  }
+}
+
+@keyframes sparkEffect {
+  0% {
+    opacity: 1;
+    transform: rotate(calc(var(--i) * 30deg - 90deg)) translateY(0) scaleY(1);
+  }
+
+  100% {
+    opacity: 0;
+    transform: rotate(calc(var(--i) * 30deg - 90deg)) translateY(-40px) scaleY(1);
+  }
+}
+
+.cursor-ripple {
+  display: none; // Disable the old ripple in favor of sparks
+}

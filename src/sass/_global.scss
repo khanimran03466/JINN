@@ -189,6 +189,8 @@ section {
     padding: 1px;
     -webkit-mask: linear-gradient(#fff 0 0) content-box,
       linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
     mask-composite: exclude;
   }
@@ -362,15 +364,19 @@ section {
     position: absolute;
     inset: -4px;
     -webkit-mask-image: linear-gradient(#fff 0 0), linear-gradient(#fff 0 0);
+    mask-image: linear-gradient(#fff 0 0), linear-gradient(#fff 0 0);
     -webkit-mask-position: 0 0, 0 0;
+    mask-position: 0 0, 0 0;
     -webkit-mask-size: auto, auto;
+    mask-size: auto, auto;
     -webkit-mask-repeat: repeat, repeat;
+    mask-repeat: repeat, repeat;
     -webkit-mask-clip: content-box, border-box;
+    mask-clip: content-box, border-box;
     -webkit-mask-origin: content-box, border-box;
+    mask-origin: content-box, border-box;
     -webkit-mask-composite: xor;
     mask-composite: exclude;
-    -webkit-mask-source-type: auto, auto;
-    mask-mode: match-source, match-source;
   }
 
   &:hover {

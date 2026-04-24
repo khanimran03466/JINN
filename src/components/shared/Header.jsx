@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import React, { useState } from "react";
+import { useState } from "react";
 import { usePathname } from "next/navigation";
 
 const Header = () => {
@@ -58,12 +58,12 @@ const Header = () => {
               </ul>
             </nav>
           </div>
-          
+
           <div className="header-right">
             <Link href="/get-started" className="glowing-btn desktop-only-btn">
               Free Demo
             </Link>
-            
+
             <button className={`hamburger-menu ${isMenuOpen ? "open" : ""}`} onClick={toggleMenu} aria-label="Toggle menu">
               <div className="hamburger-box">
                 <span className="hamburger-line"></span>

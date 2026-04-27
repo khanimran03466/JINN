@@ -60,6 +60,16 @@ svg {
   height: auto;
 }
 
+img,
+svg,
+video {
+  pointer-events: none !important;
+  -webkit-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+  user-select: none !important;
+}
+
 .container {
   width: 100%;
   max-width: 100%;

@@ -1,6 +1,6 @@
 import Hero from "../shared/Hero";
 import VideoPlay from "../shared/VideoPlay";
-import { AdvancedAIAnalysis, IndustrySpecificTools } from "@/app/data";
+import { AdvancedAIAnalysis, IndustrySpecificTools, CoreData } from "@/app/data";
 
 const Features = () => {
   return (
@@ -30,85 +30,32 @@ const Features = () => {
           <div className="slider-section my-15">
             <div className="countinous-left">
               <ul>
-                <li>
-                  <div className="card"></div>
-                </li>
-                <li>
-                  <div className="card"></div>
-                </li>
-                <li>
-                  <div className="card">
-                    <VideoPlay videoLink="https://cmtwebsite-video-bucket.s3.ap-south-1.amazonaws.com/Core+Data+_+2+Data+Extraction.mp4" />
-                    <div className="content-sec">
-                      <h3>Data Extraction & Organization</h3>
-                      <p>
-                        Automatically pull out key data from various files—no
-                        more manual sorting.
-                      </p>
+                {[...CoreData, ...CoreData].map((item, index) => (
+                  <li key={index}>
+                    <div className="card">
+                      <VideoPlay videoLink={item.videoLink} />
+                      <div className="content-sec">
+                        <h3>{item.title}</h3>
+                        <p>{item.description}</p>
+                      </div>
                     </div>
-                  </div>
-                </li>
-                <li>
-                  <div className="card"></div>
-                </li>
-                <li>
-                  <div className="card">
-                    <VideoPlay videoLink="https://cmtwebsite-video-bucket.s3.ap-south-1.amazonaws.com/Core+Data+_+4+Computer+Vision.mp4" />
-                    <div className="content-sec">
-                      <h3>Computer Vision & OCR</h3>
-                      <p>
-                        Scan images, PDFs, and documents to find and extract
-                        useful information.
-                      </p>
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div className="card"></div>
-                </li>
-                <li>
-                  <div className="card"></div>
-                </li>
+                  </li>
+                ))}
               </ul>
             </div>
             <div className="countinous-right">
               <ul>
-                <li>
-                  <div className="card"></div>
-                </li>
-                <li>
-                  <div className="card">
-                    <VideoPlay videoLink="https://cmtwebsite-video-bucket.s3.ap-south-1.amazonaws.com/Core+Data+_+1+Handwritten+Text+Recognition.mp4" />
-                    <div className="content-sec">
-                      <h3>Handwritten Text Recognition</h3>
-                      <p>
-                         Read and analyze handwritten notes, even if they&apos;re
-                        messy..
-                      </p>
+                {[...CoreData, ...CoreData].reverse().map((item, index) => (
+                  <li key={index}>
+                    <div className="card">
+                      <VideoPlay videoLink={item.videoLink} />
+                      <div className="content-sec">
+                        <h3>{item.title}</h3>
+                        <p>{item.description}</p>
+                      </div>
                     </div>
-                  </div>
-                </li>
-                <li>
-                  <div className="card"></div>
-                </li>
-                <li>
-                  <div className="card">
-                    <VideoPlay videoLink="https://cmtwebsite-video-bucket.s3.ap-south-1.amazonaws.com/Core+Data+_+3+Natural+Language+Processing.mp4" />
-                    <div className="content-sec">
-                      <h3>Natural Language Processing</h3>
-                      <p>
-                        Understand the true meaning behind text, from emails to
-                        reports.
-                      </p>
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div className="card"></div>
-                </li>
-                <li>
-                  <div className="card"></div>
-                </li>
+                  </li>
+                ))}
               </ul>
             </div>
           </div>

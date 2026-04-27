@@ -140,6 +140,29 @@ export const AdvancedAIAnalysis = [
   },
 ];
 
+export const CoreData = [
+  {
+    title: "Data Extraction & Organization",
+    description: "Automatically pull out key data from various files—no more manual sorting.",
+    videoLink: "https://cmtwebsite-video-bucket.s3.ap-south-1.amazonaws.com/Core+Data+_+2+Data+Extraction.mp4"
+  },
+  {
+    title: "Computer Vision & OCR",
+    description: "Scan images, PDFs, and documents to find and extract useful information.",
+    videoLink: "https://cmtwebsite-video-bucket.s3.ap-south-1.amazonaws.com/Core+Data+_+4+Computer+Vision.mp4"
+  },
+  {
+    title: "Handwritten Text Recognition",
+    description: "Read and analyze handwritten notes, even if they're messy.",
+    videoLink: "https://cmtwebsite-video-bucket.s3.ap-south-1.amazonaws.com/Core+Data+_+1+Handwritten+Text+Recognition.mp4"
+  },
+  {
+    title: "Natural Language Processing",
+    description: "Understand the true meaning behind text, from emails to reports.",
+    videoLink: "https://cmtwebsite-video-bucket.s3.ap-south-1.amazonaws.com/Core+Data+_+3+Natural+Language+Processing.mp4"
+  }
+];
+
 export const IndustrySpecificTools = [
   {
     title: "Natural Disaster Alerts",

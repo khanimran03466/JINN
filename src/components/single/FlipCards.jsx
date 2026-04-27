@@ -34,8 +34,8 @@ const FlipCards = () => {
       scroller: "body",
       start: "top top",
       end: "bottom bottom",
-      // pin: true,
-      scrub: 1, // Smooth scrubbing
+      scrub: 1.5, // Increased scrub for even smoother delay
+      fastScrollEnd: true,
       onUpdate: (self) => {
         if (swiperRef.current && swiperRef.current.swiper) {
           const swiper = swiperRef.current.swiper;
@@ -60,7 +60,9 @@ const FlipCards = () => {
         grabCursor={false}
         pagination={false}
         navigation={false}
-        allowTouchMove={false} // Disable dragging so it's only on scroll
+        allowTouchMove={false}
+        lazy={{ loadPrevNext: true }}
+        watchSlidesProgress={true}
         modules={[EffectFlip, Pagination, Navigation]}
         className="mySwiper"
       >
